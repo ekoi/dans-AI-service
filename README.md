@@ -14,3 +14,5 @@ We can import it in PyCharm/IntelliJ/VS Code with the Poetry Plugin installed an
 ## Deep Learning POC
 
 ### Dataverse Files - Archaeology Artifacts Recognition
+Example:<br/>
+[A deep-learning model for predictive archaeology and archaeological community detection](https://www.nature.com/articles/s41599-021-00970-z)
