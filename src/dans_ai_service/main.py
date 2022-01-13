@@ -100,7 +100,7 @@ def version():
     return '0.1'
 
 @app.get("/dataverse")
-async def dataverse(baseurl: str, doi: str, token: Optional[str] = None):
+async def dataverse(baseurl: str, doi: str, token: Optional[str] = None, includeFiles: bool = False):
     params = []
     if token:
         api = NativeApi(baseurl, token)
