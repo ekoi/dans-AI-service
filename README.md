@@ -1,4 +1,4 @@
-# DANS Artificial Intelligence Service
+# DANS Artificial Intelligence Service (POC)
 
 This work is based on [Slava Tykhonov](https://github.com/Dans-labs/spacy-dans) work.
 

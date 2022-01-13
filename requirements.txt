@@ -76,16 +76,24 @@ cytoolz==0.11.2; python_version >= "3.8" \
     --hash=sha256:ea23663153806edddce7e4153d1d407d62357c05120a4e8485bddf1bd5ab22b4
 datefinder==0.7.1 \
     --hash=sha256:3c9d8dbf103b3158cde396396b6d0afd023497d350780a944acb319db94cc612
+dawg-python==0.7.2 \
+    --hash=sha256:4a5e3286e6261cca02f205cfd5516a7ab10190fa30c51c28d345808f595e3421 \
+    --hash=sha256:4941d5df081b8d6fcb4597e073a9f60d5c1ccc9d17cd733e8744d7ecfec94ef3
+de-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.2.0/de_core_news_sm-3.2.0.tar.gz
 doccano-client==1.0.3 \
     --hash=sha256:1d930a77aa9fbdde243d2df2dde2a5fbf8a3238e15617415fd90256dd5bba2cb \
     --hash=sha256:b68a8fbb7971dbddd32baf671ab2cb43b1c90c90d7f501d613ff29f9c25b7255
+docopt==0.6.2 \
+    --hash=sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
 elasticsearch==7.16.2; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0" and python_version < "4") \
     --hash=sha256:c05aa792a52b1e6ad9d226340dc19165c4a491ac48fbd91af51ec839bf953210 \
     --hash=sha256:23ac0afb4398c48990e359ac73ab6963741bd05321345299c62d9d23e209eee2
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz
+es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.2.0/es_core_news_sm-3.2.0.tar.gz
 fastapi==0.71.0; python_full_version >= "3.6.1" \
     --hash=sha256:a78eca6b084de9667f2d5f37e2ae297270e5a119cd01c2f04815795da92fc87f \
     --hash=sha256:2b5ac0ae89c80b40d1dd4b2ea0bb1f78d7c4affd3644d080bf050f084759fff2
+fr-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.2.0/fr_core_news_sm-3.2.0.tar.gz
 future==0.17.1; (python_version >= "2.6" and python_full_version < "3.0.0") or (python_full_version >= "3.3.0") \
     --hash=sha256:67045236dcfd6816dc439556d009594abf643e5eb48992e36beac09c2ca659b8
 h11==0.12.0; python_version >= "3.6" \
@@ -97,6 +105,7 @@ html5lib==1.1; python_full_version >= "3.6.0" \
 idna==3.3; python_full_version >= "3.6.2" and python_version >= "3.8" \
     --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
     --hash=sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d
+it-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/it_core_news_sm-3.2.0/it_core_news_sm-3.2.0.tar.gz
 jellyfish==0.9.0; python_version >= "3.8" \
     --hash=sha256:c0cbe9d294f75b4fa05c0a5cb7ca4c8e85297a3ec9bf66d13ed330190a86381f \
     --hash=sha256:a3b9fae0cba82ef5839d8f2e2275387807ccb6c3041fdc8e89bbcadaf09a5837 \
@@ -274,6 +283,7 @@ murmurhash==1.0.6; python_version >= "3.8" \
     --hash=sha256:92cd7196974307143ce8e9e9b6e22e0a57abf30bdd5a1effe696b4825677e616 \
     --hash=sha256:cdd1036688341413e5adef32b3fd58e8b44f24405f394f90129f39ed879e4f24 \
     --hash=sha256:00a5252b569d3f914b5bd0bce72d2efe9c0fb91a9703556ea1b608b141c68f2d
+nb-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/nb_core_news_sm-3.2.0/nb_core_news_sm-3.2.0.tar.gz
 networkx==2.6.3; python_version >= "3.8" \
     --hash=sha256:80b6b89c77d1dfb64a4c7854981b60aeea6360ac02c6d4e4913319e0a313abef \
     --hash=sha256:c0946ed31d71f1b732b5aaa6da5a0388a345019af232ce2f49c766e2d6795c51
@@ -336,6 +346,7 @@ pandas==1.3.5; python_full_version >= "3.7.1" \
 pathy==0.6.1; python_version >= "3.8" \
     --hash=sha256:25fd04cec6393661113086730ce69c789d121bea83ab1aa18452e8fd42faf29a \
     --hash=sha256:838624441f799a06b446a657e4ecc9ebc3fdd05234397e044a7c87e8f6e76b1c
+pl-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/pl_core_news_sm-3.2.0/pl_core_news_sm-3.2.0.tar.gz
 preshed==3.0.6; python_version >= "3.8" \
     --hash=sha256:66a71ced487516cf81fd0431a3a843514262ae2f33e9a7688b87562258fa75d5 \
     --hash=sha256:6c98f725d8478f3ade4ab1ea00f50a92d2d9406d37276bc46fd8bab1d47452c4 \
@@ -353,6 +364,7 @@ preshed==3.0.6; python_version >= "3.8" \
     --hash=sha256:cfe1495fcfc7f479de840ddc4f426dbb55351e218ae5c8712c1269183a4d0060 \
     --hash=sha256:92a8f49d17a63537a8beed48a049b62ef168ca07e0042a5b2bcdf178a1fb5d48 \
     --hash=sha256:fb3b7588a3a0f2f2f1bf3fe403361b2b031212b73a37025aea1df7215af3772a
+pt-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.2.0/pt_core_news_sm-3.2.0.tar.gz
 pydantic==1.8.2; python_full_version >= "3.6.1" and python_version >= "3.8" \
     --hash=sha256:05ddfd37c1720c392f4e0d43c484217b7521558302e7069ce8d318438d297739 \
     --hash=sha256:a7c6002203fe2c5a1b5cbb141bb85060cbff88c2d78eccbc72d97eb7022c43e4 \
@@ -463,6 +475,12 @@ pymongo==4.0.1; python_version >= "3.6" \
     --hash=sha256:7bdb66340e246b5dcddfcfe79a63ac2ec3808dc394853476f49fc785425040f4 \
     --hash=sha256:65f8a93816dcb2202710839907759aca9eece94d9f13215686f224fcc8966f9e \
     --hash=sha256:13d0624c13a91da71fa0d960205d93b3d98344481be865ee7cc238c972d41d73
+pymorphy2-dicts-ru==2.4.417127.4579844 \
+    --hash=sha256:78cad03adca605021abd387a3b2eb515c851b86e94682a1ef2354a2c74fcc196 \
+    --hash=sha256:9a322a6ee78fd4a5dceead0545c24b9a91687ad5df95cbac1b36f6c36cbb498a
+pymorphy2==0.9.1 \
+    --hash=sha256:a5224ec153cd6920a33961ae636793ad5185143bc8045b3f9a9f8bd62ecacf68 \
+    --hash=sha256:86c447157dee2eb2341efbe4538e1281a754756ba1aa32da77a89614c58b560c
 pyparsing==3.0.6; python_version >= "3.6" \
     --hash=sha256:04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4 \
     --hash=sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81
@@ -580,6 +598,7 @@ regex==2021.11.10; python_full_version >= "3.6.0" and python_version >= "3.6" \
 requests==2.27.1; python_version >= "3.8" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version >= "3.8" \
     --hash=sha256:f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d \
     --hash=sha256:68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61
+ru-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.2.0/ru_core_news_sm-3.2.0.tar.gz
 scikit-learn==1.0.2; python_version >= "3.8" \
     --hash=sha256:b5870959a5484b614f26d31ca4c17524b1b0317522199dc985c3b4256e030767 \
     --hash=sha256:da3c84694ff693b5b3194d8752ccf935a665b8b5edc33a283122f4273ca3e687 \
