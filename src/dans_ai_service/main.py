@@ -36,6 +36,8 @@ from readabilipy import simple_json_from_html_string
 import datefinder
 from datetime import datetime
 
+from src.dans_ai_service.PDFProcessing import download_pdf_file, extract_pdf_to_text
+
 
 def custom_openapi():
     if app.openapi_schema:
@@ -147,15 +149,9 @@ async def dataverse(baseurl: str, doi: str, token: Optional[str] = None, include
                             print('download pdf')
                             url = "%s/api/access/datafile/%s" % (baseurl, dv_fileid)
                             print(url)
-                            resp = requests.get(url=url)
-                            if resp.status_code == 200 :
-                                # Write content in pdf file
-                                pdf = open("./tmp-pdf/" + dv_filename, 'wb')
-                                pdf.write(resp.content)
-                                pdf.close()
-                                print("File  downloaded")
-                            else:
-                                print(dv_filename, ' is restricted file')
+                            pdf = download_pdf_file(url, dv_filename)
+                            if pdf:
+                                extract_pdf_to_text(pdf)
                         else:
                             print('not pdf: ', dv_filename)
                 return save_annotation(metadata)
