@@ -18,4 +18,4 @@ Deep learning is a part of machine learning that can directly process text, imag
 DANS has numerous archaeological datasets. Having large amounts of archaeological data is a good fit for the deep learning model as the former can be reused to further refine the latter into an even cleverer piece of technology. All in all, the many studies that exist can be further explored and any artefact we find can be easily identified and traced to its source.
 To illustrate, we have the Region-based Convolutional Neural Network (R-CNN) algorithm that we can use to search for objects based on examples, such as the differing locations of burial mounds.
 There are many studies regarding this, one of which is a great example of deep learning that can be used as a reference: "[A deep-learning model for predictive archaeology and archaeological community detection](https://www.nature.com/articles/s41599-021-00970-z)" 
-z)"
+"
