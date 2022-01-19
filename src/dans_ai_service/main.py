@@ -177,7 +177,7 @@ if __name__ == "__main__":
     print("Start")
     setup()
     start_time = datetime.now()
-    logging.basicConfig(filename='../logs/import.log', level=logging.DEBUG,
+    logging.basicConfig(filename='../logsd/dans_ai_service.log', level=logging.DEBUG,
                         format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
     # Todo: log location
@@ -187,10 +187,5 @@ if __name__ == "__main__":
         logging.error(msg)
         print(msg)
         exit()
-    # Check if CSV_FILE exist
-    if not os.path.isfile(config.CSV_FILE_INPUT):
-        msg = "'" + config.CSV_FILE_INPUT + "' csv input file doesn't exist."
-        logging.error(msg)
-        print(msg)
-        exit()
+
     uvicorn.run(app, host="0.0.0.0", port=9266)
