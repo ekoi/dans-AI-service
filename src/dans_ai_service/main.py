@@ -41,12 +41,13 @@ from datetime import datetime
 
 from src.dans_ai_service.PDFProcessing import download_pdf_file, extract_pdf_to_text
 
-CONFIG_FILE = "../work/config.ini"
+CONFIG_FILE = "../../work/config.ini"
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE)
-DATAVERSE_API_TOKEN = config.get('DATAVERSE', 'API_TOKEN')
-SERVER_URL = config.get('DATAVERSE', 'SERVER_URL')
+DATAVERSE_API_TOKEN = config.get('DATAVERSE', 'DATAVERSE_API_TOKEN')
+SERVER_URL = config.get('DATAVERSE', 'DATAVERSE_SERVER_URL')
 OUTPUT_DIR = config.get('FILES', 'OUTPUT_DIR')
+LOGS_DIR = config.get('FILES', 'LOGS_DIR')
 
 
 def setup():
@@ -162,7 +163,7 @@ async def dataverse(baseurl: str, doi: str, token: Optional[str] = None, include
                             print('download pdf')
                             url = "%s/api/access/datafile/%s" % (baseurl, dv_fileid)
                             print(url)
-                            pdf = download_pdf_file(url, dv_filename)
+                            pdf = download_pdf_file(url, OUTPUT_DIR, dv_filename)
                             if pdf:
                                 extract_pdf_to_text(pdf)
                         else:
@@ -177,13 +178,13 @@ if __name__ == "__main__":
     print("Start")
     setup()
     start_time = datetime.now()
-    logging.basicConfig(filename='../logsd/dans_ai_service.log', level=logging.DEBUG,
+    logging.basicConfig(filename=LOGS_DIR + '/dans_ai_service.log', level=logging.DEBUG,
                         format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
     # Todo: log location
 
-    if not os.path.isdir(config.OUTPUT):
-        msg = "'" + config.OUTPUT + "' directory doesn't exist."
+    if not os.path.isdir(OUTPUT_DIR):
+        msg = "'" + OUTPUT_DIR + "' directory doesn't exist."
         logging.error(msg)
         print(msg)
         exit()

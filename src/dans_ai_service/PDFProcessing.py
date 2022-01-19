@@ -3,12 +3,12 @@ import requests
 import os
 
 
-def download_pdf_file(url, pdf_filename):
+def download_pdf_file(url, pdf_dir, pdf_filename):
     with requests.get(url) as r:
         if r.status_code == 200:
-            with open('./tmp-pdf/' + pdf_filename, 'wb') as f:
+            with open(pdf_dir + '/' + pdf_filename, 'wb') as f:
                 f.write(r.content)
-            return os.path.abspath('./tmp-pdf/' + pdf_filename)
+            return os.path.abspath(pdf_dir + '/' + pdf_filename)
         else:
             print(pdf_filename, ' is restricted file')
 
