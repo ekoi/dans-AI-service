@@ -3,6 +3,9 @@
 # Developed by Slava Tykhonov and Eko Indarto
 # Data Archiving and Networked Services (DANS-KNAW), Netherlands
 import uvicorn
+import logging
+import configparser
+
 import pandas as pd
 from DatesRecognition import DatesRecognition
 from fastapi import FastAPI, Request, Response
@@ -37,6 +40,17 @@ import datefinder
 from datetime import datetime
 
 from src.dans_ai_service.PDFProcessing import download_pdf_file, extract_pdf_to_text
+
+CONFIG_FILE = "../work/config.ini"
+config = configparser.ConfigParser()
+config.read(CONFIG_FILE)
+DATAVERSE_API_TOKEN = config.get('DATAVERSE', 'API_TOKEN')
+SERVER_URL = config.get('DATAVERSE', 'SERVER_URL')
+OUTPUT_DIR = config.get('FILES', 'OUTPUT_DIR')
+
+
+def setup():
+    pass
 
 
 def custom_openapi():
@@ -124,7 +138,6 @@ async def dataverse(baseurl: str, doi: str, token: Optional[str] = None, include
         resp = requests.get(url=url)
         response = resp.json()['datasetVersion']['metadataBlocks']['citation']
 
-
         # https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/KG3RJJ
 
     if response:
@@ -161,4 +174,23 @@ async def dataverse(baseurl: str, doi: str, token: Optional[str] = None, include
 
 
 if __name__ == "__main__":
+    print("Start")
+    setup()
+    start_time = datetime.now()
+    logging.basicConfig(filename='../logs/import.log', level=logging.DEBUG,
+                        format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+
+    # Todo: log location
+
+    if not os.path.isdir(config.OUTPUT):
+        msg = "'" + config.OUTPUT + "' directory doesn't exist."
+        logging.error(msg)
+        print(msg)
+        exit()
+    # Check if CSV_FILE exist
+    if not os.path.isfile(config.CSV_FILE_INPUT):
+        msg = "'" + config.CSV_FILE_INPUT + "' csv input file doesn't exist."
+        logging.error(msg)
+        print(msg)
+        exit()
     uvicorn.run(app, host="0.0.0.0", port=9266)

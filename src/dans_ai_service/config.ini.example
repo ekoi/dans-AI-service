@@ -1,0 +1,7 @@
+; config.ini
+[DATAVERSE]
+DATAVERSE_API_TOKEN = ---our-dataverse-token---
+DATAVERSE_SERVER_URL = ---dataverse-server-url---
+
+[FILES]
+OUTPUT_DIR = ../work
