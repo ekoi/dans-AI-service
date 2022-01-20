@@ -6,8 +6,8 @@ This project was set up with Poetry, a dependency management tool for Python: [P
 We can import it in PyCharm/IntelliJ/VS Code, with the Poetry Plugin installed, and run or debug the code from the IDE while also editing it to fit our needs. 
 ## Machine Learning POC
 
-### Dataverse Datasets - CIMDI
-
+### Dataverse Datasets - CMDI
+    
 ### Dataverse Files - GDPR
 
 ## Deep Learning POC
